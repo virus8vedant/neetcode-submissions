@@ -14,3 +14,5 @@ class Solution {
         return false;
     }
 }
+
+// Pattern: use a HashSet when the question asks whether an item was seen before.
