@@ -1,0 +1,25 @@
+// Pattern: Group items using a canonical representation as a HashMap key.
+
+
+What you did well
+- You independently found a valid grouping strategy.
+- You separated isAnagram, keeping the main method readable.
+- You handled duplicate input strings correctly.
+- You used traversed to avoid creating the same group repeatedly.
+
+Your nested loops perform up to O(n²) comparisons. Each comparison sorts two strings:
+
+Arrays.sort(c1);
+Arrays.sort(c2);
+
+Sorting costs O(k log k), so overall:
+
+- Time: O(n² × k log k)
+- Space: roughly O(n + k), excluding the output.
+------------
+The learning takeaway
+
+Your current solution uses pairwise comparison. The optimized solution uses classification by canonical representation.
+
+That’s the reusable pattern:
+When several objects belong to the same group, search for a common key instead of comparing every pair.
