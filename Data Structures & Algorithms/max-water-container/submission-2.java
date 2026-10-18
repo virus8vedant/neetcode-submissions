@@ -1,3 +1,5 @@
+/// We move the pointer at the shorter line because keeping that line while reducing the width cannot increase the area.
+
 class Solution {
     public int maxArea(int[] heights) {
         
